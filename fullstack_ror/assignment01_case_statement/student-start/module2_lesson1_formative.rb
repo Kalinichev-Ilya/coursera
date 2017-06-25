@@ -1,16 +1,16 @@
-some_var = "false"
-another_var = "nil"
+some_var = 'false'
+another_var = 'nil'
 
 case
-  when some_var == "pink elephant"
+  when some_var == 'pink elephant' # has a value, then true; "false" == true; false
     puts "Don't think about the pink elephant!"
   
-  when another_var.nil?
-    puts "Question mark in the method name?"
+  when another_var.nil? # has a string value; then false
+    puts 'Question mark in the method name?'
   
-  when some_var == false
-    puts "Looks like this one should execute"
+  when some_var.eql? false # "false" == false; then false
+    puts 'Looks like this one should execute'
   
   else
-    puts "I guess nothing matched... But why?"
+    puts 'I guess nothing matched... But why?'
 end
