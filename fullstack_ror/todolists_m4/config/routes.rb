@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :todo_lists do
-    resources :todo_lists, only: [:create, :destroy]
+    resources :todo_items
   end
   
   root 'todo_lists#index'
