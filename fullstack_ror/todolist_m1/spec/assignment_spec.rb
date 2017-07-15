@@ -100,7 +100,7 @@ describe Assignment do
             expect(TodoList < ActiveRecord::Base).to eq(true)
           end
           context "TodoList class properties defined" do
-            subject(:todolist) { TodoList.new }
+            subject(:todolist_m1) { TodoList.new }
             it { is_expected.to respond_to(:list_due_date) } 
             it { is_expected.to respond_to(:list_name) } 
             it { is_expected.to respond_to(:created_at) } 
@@ -122,7 +122,7 @@ describe Assignment do
             expect(TodoItem < ActiveRecord::Base).to eq(true)
           end
           context "TodoItem class properties defined" do
-            subject(:todolist) { TodoItem.new }
+            subject(:todolist_m1) { TodoItem.new }
             it { is_expected.to respond_to(:due_date) } 
             it { is_expected.to respond_to(:title) } 
             it { is_expected.to respond_to(:description) } 
