@@ -9,7 +9,7 @@ class TodoItemsController < ApplicationController
   
   # GET /todo_items/new
   def new
-    @todo_item = @todo_list.todo_item.new
+    @todo_item = @todo_list.todo_items.new
   end
   
   # GET /todo_items/1/edit
@@ -19,10 +19,10 @@ class TodoItemsController < ApplicationController
   # POST /todo_items
   # POST /todo_items.json
   def create
-    @todo_item = @todo_list.todo_item.new(todo_item_params)
+    @todo_item = @todo_list.todo_items.new(todo_item_params)
     
     respond_to do |format|
-      if @todo_item.save
+      if @todo_list.save
         format.html { redirect_to @todo_list, notice: 'Todo item was successfully created.' }
         format.json { render :show, status: :created, location: @todo_list }
       else
